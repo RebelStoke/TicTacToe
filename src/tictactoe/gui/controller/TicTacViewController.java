@@ -23,7 +23,6 @@ import tictactoe.bll.IGameModel;
  */
 public class TicTacViewController implements Initializable
 {
-
     @FXML
     private Label lblPlayer;
 
@@ -35,6 +34,24 @@ public class TicTacViewController implements Initializable
     
     private static final String TXT_PLAYER = "Player: ";
     private IGameModel game;
+    @FXML
+    public static Button btn1;
+    @FXML
+    public static Button btn2;
+    @FXML
+    public static Button btn3;
+    @FXML
+    public static Button btn4;
+    @FXML
+    public static Button btn5;
+    @FXML
+    public static Button btn6;
+    @FXML
+    public static Button btn7;
+    @FXML
+    public static Button btn8;
+    @FXML
+    public static Button btn9;
 
     @FXML
     private void handleButtonAction(ActionEvent event)
@@ -45,20 +62,23 @@ public class TicTacViewController implements Initializable
             Integer col = GridPane.getColumnIndex((Node) event.getSource());
             int r = (row == null) ? 0 : row;
             int c = (col == null) ? 0 : col;
-            int player = game.getNextPlayer();
             if (game.play(c, r))
             {
+                {
+                    
+                    Button btn = (Button) event.getSource();
+                    if ("".equals(btn.getText())){
+                    game.getNextPlayer();
+                    int player = game.getNextPlayer();
+                    String xOrO = player == 0 ? "X" : "O";
+                    btn.setText(xOrO);
+                    setPlayer();
+                    }
+                }
                 if (game.isGameOver())
                 {
                     int winner = game.getWinner();
                     displayWinner(winner);
-                }
-                else
-                {
-                    Button btn = (Button) event.getSource();
-                    String xOrO = player == 0 ? "X" : "O";
-                    btn.setText(xOrO);
-                    setPlayer();
                 }
             }
         } catch (Exception e)
@@ -110,5 +130,4 @@ public class TicTacViewController implements Initializable
             btn.setText("");
         }
     }
-
 }

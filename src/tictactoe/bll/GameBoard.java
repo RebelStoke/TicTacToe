@@ -50,141 +50,6 @@ public class GameBoard implements IGameModel
         return true;
     }
 
-    public boolean isGameOver()
-    {
-        int win = 0;
-        
-        if("X".equals(TicTacViewController.btn1.getText())&&
-        "X".equals(TicTacViewController.btn2.getText())&&
-        "X".equals(TicTacViewController.btn3.getText()))
-       {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(TicTacViewController.btn1.getText())&&
-        "O".equals(TicTacViewController.btn2.getText())&&
-        "O".equals(TicTacViewController.btn3.getText()))
-       {
-        win = 1;
-        winner = 0;
-     }
-   
-     else if("X".equals(TicTacViewController.btn4.getText())&&
-        "X".equals(TicTacViewController.btn5.getText())&&
-        "X".equals(TicTacViewController.btn6.getText()))
-      {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(TicTacViewController.btn4.getText())&&
-        "O".equals(TicTacViewController.btn5.getText())&&
-        "O".equals(TicTacViewController.btn6.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(TicTacViewController.btn7.getText())&&
-        "X".equals(TicTacViewController.btn8.getText())&&
-        "X".equals(TicTacViewController.btn9.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(TicTacViewController.btn7.getText())&&
-        "O".equals(TicTacViewController.btn8.getText())&&
-        "O".equals(TicTacViewController.btn9.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(TicTacViewController.btn1.getText())&&
-        "X".equals(TicTacViewController.btn4.getText())&&
-        "X".equals(TicTacViewController.btn7.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(TicTacViewController.btn1.getText())&&
-        "O".equals(TicTacViewController.btn4.getText())&&
-        "O".equals(TicTacViewController.btn7.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(TicTacViewController.btn2.getText())&&
-        "X".equals(TicTacViewController.btn5.getText())&&
-        "X".equals(TicTacViewController.btn8.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(TicTacViewController.btn2.getText())&&
-        "O".equals(TicTacViewController.btn5.getText())&&
-        "O".equals(TicTacViewController.btn8.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(TicTacViewController.btn3.getText())&&
-        "X".equals(TicTacViewController.btn6.getText())&&
-        "X".equals(TicTacViewController.btn9.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(TicTacViewController.btn3.getText())&&
-        "O".equals(TicTacViewController.btn6.getText())&&
-        "O".equals(TicTacViewController.btn9.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(TicTacViewController.btn1.getText())&&
-        "X".equals(TicTacViewController.btn5.getText())&&
-        "X".equals(TicTacViewController.btn9.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(TicTacViewController.btn1.getText())&&
-        "O".equals(TicTacViewController.btn5.getText())&&
-        "O".equals(TicTacViewController.btn9.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(TicTacViewController.btn3.getText())&&
-        "X".equals(TicTacViewController.btn5.getText())&&
-        "X".equals(TicTacViewController.btn7.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(TicTacViewController.btn3.getText())&&
-        "O".equals(TicTacViewController.btn5.getText())&&
-        "O".equals(TicTacViewController.btn7.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-        return win == 1;
-    }
-
     /**
      * Gets the id of the winner, -1 if its a draw.
      *
@@ -202,6 +67,11 @@ public class GameBoard implements IGameModel
     public void newGame()
     {
         //TODO Implement this method
+    }
+
+    @Override
+    public boolean isGameOver() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

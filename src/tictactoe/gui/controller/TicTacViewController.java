@@ -66,7 +66,7 @@ public class TicTacViewController implements Initializable
             if (game.play(c, r))
             {
                 {
-                    if (isGameOver())
+                    if (game.isGameOver(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9))
                 {
                     displayWinner(winner);
                 }
@@ -79,7 +79,7 @@ public class TicTacViewController implements Initializable
                     setPlayer();
                     }
                     }
-                    if (isGameOver())
+                    if (game.isGameOver(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9))
                 {
                     displayWinner(winner);
                 }
@@ -135,146 +135,5 @@ public class TicTacViewController implements Initializable
             Button btn = (Button) n;
             btn.setText("");
         }
-    }
-    public boolean isGameOver()
-    {
-        int win = 0;
-        
-        if("X".equals(btn1.getText())&&
-        "X".equals(btn2.getText())&&
-        "X".equals(btn3.getText()))
-       {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(btn1.getText())&&
-        "O".equals(btn2.getText())&&
-        "O".equals(btn3.getText()))
-       {
-        win = 1;
-        winner = 0;
-     }
-   
-     else if("X".equals(btn4.getText())&&
-        "X".equals(btn5.getText())&&
-        "X".equals(btn6.getText()))
-      {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(btn4.getText())&&
-        "O".equals(btn5.getText())&&
-        "O".equals(btn6.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(btn7.getText())&&
-        "X".equals(btn8.getText())&&
-        "X".equals(btn9.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(btn7.getText())&&
-        "O".equals(btn8.getText())&&
-        "O".equals(btn9.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(btn1.getText())&&
-        "X".equals(btn4.getText())&&
-        "X".equals(btn7.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(btn1.getText())&&
-        "O".equals(btn4.getText())&&
-        "O".equals(btn7.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(btn2.getText())&&
-        "X".equals(btn5.getText())&&
-        "X".equals(btn8.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(btn2.getText())&&
-        "O".equals(btn5.getText())&&
-        "O".equals(btn8.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(btn3.getText())&&
-        "X".equals(btn6.getText())&&
-        "X".equals(btn9.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(btn3.getText())&&
-        "O".equals(btn6.getText())&&
-        "O".equals(btn9.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(btn1.getText())&&
-        "X".equals(btn5.getText())&&
-        "X".equals(btn9.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(btn1.getText())&&
-        "O".equals(btn5.getText())&&
-        "O".equals(btn9.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     
-     else if("X".equals(btn3.getText())&&
-        "X".equals(btn5.getText())&&
-        "X".equals(btn7.getText()))
-        {
-        win = 1;
-        winner = 1;
-     }
-     
-     else if("O".equals(btn3.getText())&&
-        "O".equals(btn5.getText())&&
-        "O".equals(btn7.getText()))
-        {
-        win = 1;
-        winner = 0;
-     }
-     else if(!"".equals(btn1.getText())&&!"".equals(btn2.getText())&&!"".equals(btn3.getText())&&
-             !"".equals(btn4.getText())&&!"".equals(btn5.getText())&&!"".equals(btn6.getText())&&
-             !"".equals(btn7.getText())&&!"".equals(btn8.getText())&&!"".equals(btn9.getText())){
-              win = 1;
-              winner = -1;
-     }
-     
-     
-        return win == 1;
     }
 }

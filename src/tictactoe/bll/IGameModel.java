@@ -5,13 +5,14 @@
  */
 package tictactoe.bll;
 
+import javafx.scene.control.Button;
+
 /**
  *
  * @author Stegger
  */
 public interface IGameModel
 {
-
     /**
      * Returns 0 for player 0, 1 for player 1.
      *
@@ -34,10 +35,10 @@ public interface IGameModel
     /**
      * Tells us if the game has ended either by draw or by meeting the winning
      * condition.
-     *
+     
      * @return true if the game is over, else it will retun false.
      */
-    public boolean isGameOver();
+    public boolean isGameOver(Button btn1,Button btn2,Button btn3,Button btn4,Button btn5,Button btn6,Button btn7,Button btn8,Button btn9);
 
     /**
      * Gets the id of the winner, -1 if its a draw.

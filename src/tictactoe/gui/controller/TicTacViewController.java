@@ -23,7 +23,6 @@ import tictactoe.bll.IGameModel;
  */
 public class TicTacViewController implements Initializable
 {
-    int winner;
     @FXML
     private Label lblPlayer;
 
@@ -68,20 +67,20 @@ public class TicTacViewController implements Initializable
                 {
                     if (game.isGameOver(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9))
                 {
-                    displayWinner(winner);
+                    displayWinner(game.getWinner());
                 }
                    else {Button btn = (Button) event.getSource();
                     if ("".equals(btn.getText())){
                     game.getNextPlayer();
                     int player = game.getNextPlayer();
-                    String xOrO = player == 0 ? "X" : "O";
+                    String xOrO = player == 0 ? "O" : "X";
                     btn.setText(xOrO);
                     setPlayer();
                     }
                     }
                     if (game.isGameOver(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9))
                 {
-                    displayWinner(winner);
+                    displayWinner(game.getWinner());
                 }
                 }
                 
